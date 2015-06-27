@@ -85,7 +85,7 @@ a:hover img{
 
 ---------------------------*/
 body{
-border-top:#f0f8ff 5px solid;
+border-top:#d3d3d3 5px solid;
 background:url(../sozai/crisp_paper_ruffles_@2X.png);
 }
 
@@ -95,7 +95,7 @@ background:url(../sozai/crisp_paper_ruffles_@2X.png);
 ---------------------------*/
 #header{
 padding:10px 0;
-border-top:#00bfff 5px solid;
+border-top:#ffffff 5px solid;
 background:url(../sozai/vaio_hard_edge_@2X.png);
 height:69px;
 }
@@ -190,16 +190,16 @@ padding: 3px;
 margin: 0px 0px 0px 0px;
 text-decoration: none;
 font-weight: 600; 
-border:outset 3px #84a2d4;
-background-color: #ebf6f7;
+border:outset 3px #696969;
+background-color:;
 text-align: center;
-color: #202f55;
+color: #000000;
 font-size: 16px;
 text-shadow:1px 1px 1px #c4c4c4;
 }
 #menu li a:hover{
-border: inset 3px #84a2d4;
-background-color: #eaf4fc;
+border: inset 3px #696969;
+background-color: #dcdcdc;
 }
 
 
@@ -260,6 +260,8 @@ border:#000;
 margin-top:-30px;
 margin-bottom:25px;
 }
+
+
 #sample{
 width:910px;/*全体の横幅*/
 }
@@ -274,13 +276,105 @@ margin-right:10px;
 margin-bottom:10px;
 }
 
+#sample .cover{
+        /*  ⬇︎画像の奥行きの深さを指定  */
+	-webkit-perspective: 1700px;
+    -moz perspective: 1700px;
+    perspective: 1700px;
+    
+    /*  ⬇︎奥行きが始まる位置を設定  */
+    -webkit-perspective-origin: left;
+    -moz-perspective-origin: left;
+    perspective-origin: lef
+}
+
+#sample .cover img{
+    max-width: 100%;
+    display: block;
+    position: relative;
+}
+
+#sample .caption {
+    /*  ⬇︎タイトルと本文を固定しよう  */
+	position: absolute;
+	top: 0;
+	left: 0;
+    
+    height: 150px;
+	padding: 20px;
+	background: #800000;
+	color: #a0522d;
+       opacity: 0; 
+      /*  ⬇︎紺色部分のY軸が-90度回転している状態（紺色が隠れてる状態）  */
+    -webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+    /*  ⬇︎動きをなめらかに */
+	-webkit-transition: -webkit-transform 0.4s; opacity 0.1s 0.3s; -moz-transform 0.4s, opazity 0.1s 0.3s; transition: transform 0.4s, opacity 0.1s 0.3s;
+    /* ⬇︎transformが始まる原点の位置を設定するよ */
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0 ; 
+}
+
+#sample .caption h3 {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+#sample li.caption{
+    height: 100%;
+    width: 50%;
+
+}
+#sample li:hover .caption{
+    opacity: 1;
+    
+      /*  ⬇︎紺色部分のY軸を0度に戻すよ（紺色が全部見えてる状態） */
+	-webkit-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+    
+    
+
+    /*  ⬇︎動きをなめらかに */
+	-webkit-transition: -webkit-transform 0.4s,opacity 0.1s;
+    -moz-transition: -moz-transform o.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+
+#sample .cover:hover img {
+    /*  ⬇︎画像を横にずらす  */
+	-webkit-transform: translateX(25%);
+	-ms-transform: translateX(25%);
+	-o-transform: translateX(25%);
+	transform: translateX(25%);   
+}
+
+#sample .cover img {
+    /*  ⬇︎動きをなめらかに  */
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;   
+}
+
+#sample .cover{
+    /*  ⬇︎はみ出した部分を隠す  */
+	overflow: hidden;
+}
+
+
 .sec{
 overflow: hidden;
 }
 
+
+
 #omise{
 float:left;
-width:400;
+width:400px;
 margin-right:10px;
 margin-bottom:10px;
 }
