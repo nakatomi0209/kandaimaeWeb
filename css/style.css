@@ -86,7 +86,11 @@ a:hover img{
 ---------------------------*/
 body{
 border-top:#d3d3d3 5px solid;
-background:url(../sozai/crisp_paper_ruffles_@2X.png);
+    background:url(../sozai/jitennsha.jpg) no-repeat;
+background-size: cover;  
+}
+#wrap{
+    background-color:rgba(255,255,255,0.8);/*background-color:rgbaを使用すると、現在の要素だけが透明になる。*/
 }
 
 
@@ -96,7 +100,7 @@ background:url(../sozai/crisp_paper_ruffles_@2X.png);
 #header{
 padding:10px 0;
 border-top:#ffffff 5px solid;
-background:url(../sozai/vaio_hard_edge_@2X.png);
+background:url();
 height:69px;
 }
 
@@ -190,16 +194,17 @@ padding: 3px;
 margin: 0px 0px 0px 0px;
 text-decoration: none;
 font-weight: 600; 
-border:outset 3px #696969;
-background-color:;
+border:outset 3px #d3d3d3;
+background-color:#ff8a00;
 text-align: center;
-color: #000000;
+color: #000;
 font-size: 16px;
 text-shadow:1px 1px 1px #c4c4c4;
 }
 #menu li a:hover{
 border: inset 3px #696969;
-background-color: #dcdcdc;
+background-color: #000;
+color: #fff
 }
 
 
@@ -479,13 +484,13 @@ line-height:30px;
 /*表組みの設定*/
 #entryForm table{
 	width:100%;
-	border:#66ccff 2px solid;
+	border:#d3d3d3 2px solid;
 	border-collapse:collapse;
 }
 
 #entryForm th,
 #entryForm td{
-	border:#66ccff 1px solid;
+	border:#d3d3d3 1px solid;
 	padding:5px 10px;
 }
 
