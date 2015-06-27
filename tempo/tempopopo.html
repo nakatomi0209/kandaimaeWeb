@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja-JP" xml:lang="ja-JP">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>関大前.com</title>
+<meta name="Keywords" content="関大前.com,関大前,関西大学,関大,関大前商店街,アルバイト" />
+<meta name="Description" content="関大生×関大前商店会で作る、世界一面白い学生街「関大前商店街」を
+関大前.comが作ります！" />
+<link rel="stylesheet" type="text/css" href="../css/style.css" media="all" />
+
+</head>
+
+<body id="top">
+<!-- ヘッダー部分-->
+<div id="header">
+<div class="inner">
+	<h1 id="logo"><a href="../home/index.html"><img src="../sozai/logo.png" width="162" height="69" alt=""></a></h1>
+	<p id="catch">~関大生×関大前商店会で作る、世界一おもろい学生街「関大前商店街」~</p>
+<div id="info">
+	<p>twitter @kandaimae.com</P>
+</div>
+</div><!-- /#inner -->
+</div><!-- /#header -->
+
+<!-- グローナルナビゲーション部分 -->
+<div id="menu">
+<ul>
+<li class="gnav01"><a href="../home/index.html">ホーム</a></li>
+<li class="gnav02"><a href="tempo.html"  class="selected">店舗情報</a></li>
+<li class="gnav03"><a href="../arbeit/arbeit.html">アルバイト</a></li>
+<li class="gnav04"><a href="../otoiawase/otoiawase.html">お問い合わせ</a></li>
+</ul>
+</div><!-- /#gnav -->
+
+<!-- コンテンツ部分 -->
+<div id="contents" class="clearfix">
+
+<ul id="pankuzu">
+<li><a href="../home/index.html">ホーム</a></li>
+<li><a href="tempo.html">店舗情報</a></li>
+</ul>
+
+
+<!-- メイン部分　-->
+<div id="main">
+<div class="sec">
+<h2 class="hdg">関大前商店街情報</h2>
+</div><!-- /.sec -->
+<div id="map">
+<img src="../sozai/map.jpg" alt="関大前map" width="910" height="300" />
+</div><!-- /#map -->
+
+<div id="content">
+<ul>
+<li><a href="omise001.html"><img src="../img/meranju.jpg" alt="merange"  /></a></li>
+<li><a href="omise002.html"><img src="../img/tubohati.jpg" alt="つぼ八" /></a></li>
+<li><a href="omise003.html"><img src="../img/mu-nwo-ku.jpg" alt="Bar moon walk" /></a></li>
+<li><a href="omise004.html"><img src="../img/mosu.jpg" alt="モスバーガー" /></a></li>
+<li><a href="omise005.html"><img src="../img/kyabetu.jpg" alt="キャベツハウス" /></a></li>
+<li><a href="omise006.html"><img src="../img/torijirou.jpg" alt="鳥二郎" /></a></li>
+
+</ul>
+</div><!-- /#content -->
+</div><!-- /#main -->
+
+
+
+</div><!-- /.contents -->
+
+<!-- フッター部分 -->
+<div id="footer">
+<div class="inner">
+<ul>
+<li><a href="#">サイトポリシー</a></li>
+<li><a href="#">プライバシーポリシー</a></li>
+<li><a href="#">サイトマップ</a></li>
+</ul>
+
+<p id="copyright">&copy;Copyright 関大前.com All rights reserved.</p>
+</div><!-- /.inner -->
+</div><!-- /#footer -->
+
+
+
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	// ウィンドウ幅が変わったらcalculateContentを行います
+	$(window).bind("resize", calculateContent);
+
+	// 最初にウィンドウ幅をcalculateContentを実行
+	calculateContent();
+});
+
+function calculateContent( e ) {
+   // 隠れているのを含めて、いったん全部表示
+   $("#content img").show();
+   
+   // 要素幅は100px + 40px + 40px + 2px + 2pxで184pxとなります
+   var imageWidth = 184;
+
+   // #contentの幅を取得します
+   var contentAreaWidth = $("#content").width();
+
+   // 一列あたりの表示個数を計算
+   var itemsPerRow = Math.floor(contentAreaWidth / imageWidth);
+   
+   // 画像の数を数えます
+   var totalNrOfItems = $("#content img").length;
+   
+   // 行数を取得
+   var fullRows = Math.floor(totalNrOfItems / itemsPerRow);
+   
+   // 何個の画像を隠すか計算
+   var itemsToHide = totalNrOfItems - fullRows * itemsPerRow;
+   
+   // はみ出た画像を隠します
+   for(var i = totalNrOfItems; i > totalNrOfItems - itemsToHide; i--) {
+      var remover = i - 1;
+      $("#content img:eq("+remover+")").hide();
+   }
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
